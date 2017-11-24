@@ -44,7 +44,7 @@
 
             var res = client.GetAsync("/customers/1").Result;
 
-            Console.WriteLine($"end Request to /customers/1:{res.StatusCode}");
+            Console.WriteLine($"Send Request to /customers/1:{res.StatusCode}");
 
             if (res.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -59,7 +59,7 @@
         {
             HttpClient client = new HttpClient();
 
-            client.BaseAddress = new Uri( "http://localhost:9009");
+            client.BaseAddress = new Uri( "http://localhost:9000");
             client.DefaultRequestHeaders.Clear();
 
             var res2 = client.GetAsync("/api/auth?name=catcher&pwd=123").Result;

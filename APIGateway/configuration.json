@@ -19,6 +19,14 @@
             "DownstreamPort": 9001,
             "UpstreamPathTemplate": "/customers/{id}",
             "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/auth",
+            "DownstreamScheme": "http",
+            "DownstreamHost": "localhost",
+            "DownstreamPort": 9009,
+            "UpstreamPathTemplate": "/api/auth",
+            "UpstreamHttpMethod": [ "Get" ]
         }
     ],
     "GlobalConfiguration": {
