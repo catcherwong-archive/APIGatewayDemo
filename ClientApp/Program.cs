@@ -13,43 +13,36 @@
             client.DefaultRequestHeaders.Clear();
             client.BaseAddress = new Uri("http://localhost:9000");
 
+            // 1. without access_token will not access the service
+            //    and return 401 .
             var resWithoutToken = client.GetAsync("/customers").Result;
 
-            Console.WriteLine($"Send Request to /customers , without token:{resWithoutToken.StatusCode}");
+            Console.WriteLine($"Sending Request to /customers , without token.");
+            Console.WriteLine($"Result : {resWithoutToken.StatusCode}");
 
-            if (resWithoutToken.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Console.WriteLine(resWithoutToken.Content.ReadAsStringAsync().Result);
-            }
-
-            Console.WriteLine("Begin Auth....");
-
+            //2. with access_token will access the service
+            //   and return result.
+            client.DefaultRequestHeaders.Clear();
+            Console.WriteLine("\nBegin Auth....");
             var jwt = GetJwt();
-
             Console.WriteLine("End Auth....");
-            Console.WriteLine($"Token={jwt}");
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {jwt}");
+            Console.WriteLine($"\nToken={jwt}");
 
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {jwt}");
             var resWithToken = client.GetAsync("/customers").Result;
 
-            Console.WriteLine($"Send Request to /customers , with token):{resWithToken.StatusCode}");
+            Console.WriteLine($"\nSend Request to /customers , with token.");
+            Console.WriteLine($"Result : {resWithToken.StatusCode}");
+            Console.WriteLine(resWithToken.Content.ReadAsStringAsync().Result);
 
-            if (resWithToken.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Console.WriteLine(resWithToken.Content.ReadAsStringAsync().Result);
-            }
-
-
-            Console.WriteLine("No Auth API");
-
+            //3. visit no auth service 
+            Console.WriteLine("\nNo Auth Service Here ");
+            client.DefaultRequestHeaders.Clear();
             var res = client.GetAsync("/customers/1").Result;
 
-            Console.WriteLine($"Send Request to /customers/1:{res.StatusCode}");
-
-            if (res.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                Console.WriteLine(res.Content.ReadAsStringAsync().Result);
-            }
+            Console.WriteLine($"Send Request to /customers/1");
+            Console.WriteLine($"Result : {res.StatusCode}");
+            Console.WriteLine(res.Content.ReadAsStringAsync().Result);
 
             Console.Read();
         }
