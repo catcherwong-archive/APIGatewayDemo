@@ -1,0 +1,32 @@
+﻿{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/customers",
+            "DownstreamScheme": "http",
+            "DownstreamHost": "localhost",
+            "DownstreamPort": 9001,
+            "UpstreamPathTemplate": "/customers",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/customers/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHost": "localhost",
+            "DownstreamPort": 9001,
+            "UpstreamPathTemplate": "/customers/{id}",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/products",
+            "DownstreamScheme": "http",
+            "DownstreamPort": 9002,
+            "DownstreamHost": "localhost",
+            "UpstreamPathTemplate": "/api/products",
+            "UpstreamHttpMethod": [ "Get" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "AdministrationPath": "/administration"
+    }
+}
