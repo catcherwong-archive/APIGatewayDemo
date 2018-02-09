@@ -22,4 +22,8 @@ Link here : [APIGatewayJWTAuthenticationDemo](https://github.com/catcherwong-arc
 
 A simple demo using Ocelot and NLog.
 
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Part Three - Logging](http://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-part-three-logging2/) for more infomation.
+
+
+
 Link here : [APIGatewayLoggingDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayLoggingDemo)
