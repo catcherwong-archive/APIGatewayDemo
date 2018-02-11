@@ -1,0 +1,43 @@
+﻿{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/values",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
+            "UpstreamPathTemplate": "/customers",
+            "UpstreamHttpMethod": [ "Get" ],
+            "RateLimitOptions": {
+                "ClientWhitelist": [],
+                "EnableRateLimiting": true,
+                "Period": "1s",
+                "PeriodTimespan": 1,
+                "Limit": 1
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/values/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
+            "UpstreamPathTemplate": "/customers/{id}",
+            "UpstreamHttpMethod": [ "Get" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "AdministrationPath": "/administration",
+        "RateLimitOptions": {            
+            "DisableRateLimitHeaders": false,
+            "QuotaExceededMessage": "Customize Tips!"
+        }
+    }
+}
