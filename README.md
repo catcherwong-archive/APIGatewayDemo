@@ -24,6 +24,12 @@ A simple demo using Ocelot and NLog.
 
 Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Part Three - Logging](http://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-part-three-logging2/) for more infomation.
 
-
-
 Link here : [APIGatewayLoggingDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayLoggingDemo)
+
+## #4 Rate Limiting Demo
+
+A simple demo using Ocelot to hanlde Rate Limiting.
+
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Rate Limiting - Part Four](http://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-rate-limiting-part-four/) for more infomation.
+
+Link here : [APIGatewayRateLimitDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayRateLimitDemo)
