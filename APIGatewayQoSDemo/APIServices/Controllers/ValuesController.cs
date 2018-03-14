@@ -7,12 +7,18 @@
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private static int _count = 0;
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            System.Console.WriteLine("get...");
-            Thread.Sleep(5000);
+            _count++;
+            System.Console.WriteLine($"get...{_count}");
+            if(_count <= 3)
+            {
+                Thread.Sleep(5000);
+            }            
             return new string[] { "value1", "value2" };
         }
 
