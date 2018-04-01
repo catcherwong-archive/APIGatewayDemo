@@ -34,11 +34,19 @@ Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Rate Limiting
 
 Link here : [APIGatewayRateLimitDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayRateLimitDemo)
 
-
 ## #5 Quality of Service Demo
 
-A simple demo using Ocelot to hanlde Rate Limiting.
+A simple demo using Ocelot to hanlde QoS.
 
 Please follow [Building API Gateway Using Ocelot In ASP.NET Core - QoS (Quality of Service)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-qos/) for more infomation.
 
 Link here : [APIGatewayQoSDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayQoSDemo)
+
+## #6 Load Balancing Demo
+
+A simple demo using Ocelot to hanlde Load Balancing.
+
+Please follow [	
+Building API Gateway Using Ocelot In ASP.NET Core - Load Balancing](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-load-balancing/) for more infomation.
+
+Link here : [APIGatewayLBDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayLBDemo)
