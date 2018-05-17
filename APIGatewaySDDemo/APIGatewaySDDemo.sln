@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{039DF16F-2AD8-4BDB-97A0-5B17484DBA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceA", "APIServiceA\APIServiceA.csproj", "{1243018F-C0C3-40C6-A2D8-3D74CCD34E0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceB", "APIServiceB\APIServiceB.csproj", "{95A340A0-FA6A-4C96-9D53-BB428079758E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{039DF16F-2AD8-4BDB-97A0-5B17484DBA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039DF16F-2AD8-4BDB-97A0-5B17484DBA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039DF16F-2AD8-4BDB-97A0-5B17484DBA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039DF16F-2AD8-4BDB-97A0-5B17484DBA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1243018F-C0C3-40C6-A2D8-3D74CCD34E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1243018F-C0C3-40C6-A2D8-3D74CCD34E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1243018F-C0C3-40C6-A2D8-3D74CCD34E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1243018F-C0C3-40C6-A2D8-3D74CCD34E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
