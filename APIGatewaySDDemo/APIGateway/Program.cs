@@ -3,9 +3,10 @@
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
     using Ocelot.DependencyInjection;
     using Ocelot.Middleware;
-    
+  
     public class Program
     {
         public static void Main(string[] args)
@@ -15,6 +16,7 @@
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                   .UseUrls("http://*:9000")
                .ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     config
