@@ -3,9 +3,23 @@
         {
             "DownstreamPathTemplate": "/api/values",
             "DownstreamScheme": "http",
-            "UpstreamPathTemplate": "/",
+            "UpstreamPathTemplate": "/a",
             "UseServiceDiscovery": true,
             "ServiceName": "service-a",
+            "UpstreamHttpMethod": [ "Get" ],
+            "QoSOptions": {
+                "ExceptionsAllowedBeforeBreaking": 3,
+                "DurationOfBreak": 10000,
+                "TimeoutValue": 5000
+            },
+            "FileCacheOptions": { "TtlSeconds": 15 }
+        },
+        {
+            "DownstreamPathTemplate": "/api/values",
+            "DownstreamScheme": "http",
+            "UpstreamPathTemplate": "/b",
+            "UseServiceDiscovery": true,
+            "ServiceName": "service-b",
             "UpstreamHttpMethod": [ "Get" ],
             "QoSOptions": {
                 "ExceptionsAllowedBeforeBreaking": 3,

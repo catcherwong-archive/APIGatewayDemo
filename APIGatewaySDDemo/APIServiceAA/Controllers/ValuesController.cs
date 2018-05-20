@@ -1,5 +1,5 @@
-﻿namespace APIServiceA.Controllers
-{
+﻿namespace APIServiceAA.Controllers
+{    
     using Microsoft.AspNetCore.Mvc;
     
     [Route("api/[controller]")]
@@ -10,7 +10,7 @@
         public string Get()
         {
             return $"I'm ServiceA -- {Request.Host.Port}";
-        }     
+        }
 
         [HttpGet]
         [HttpHead]

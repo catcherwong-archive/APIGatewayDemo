@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceA", "APIServiceA\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceB", "APIServiceB\APIServiceB.csproj", "{95A340A0-FA6A-4C96-9D53-BB428079758E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIServiceAA", "APIServiceAA\APIServiceAA.csproj", "{C11CF37B-4542-4F67-A93C-BA01D1483AFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A340A0-FA6A-4C96-9D53-BB428079758E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11CF37B-4542-4F67-A93C-BA01D1483AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11CF37B-4542-4F67-A93C-BA01D1483AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11CF37B-4542-4F67-A93C-BA01D1483AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11CF37B-4542-4F67-A93C-BA01D1483AFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
