@@ -1,0 +1,60 @@
+﻿{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
+            "UpstreamPathTemplate": "/a/swagger.json",
+            "UpstreamHttpMethod": [ "Get", "POST" ]
+           
+        },
+        {
+            "DownstreamPathTemplate": "/swagger/v1/swagger.json",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9002
+                }
+            ],
+            "UpstreamPathTemplate": "/b/swagger.json",
+            "UpstreamHttpMethod": [ "Get","POST" ]
+           
+        },
+        {
+            "DownstreamPathTemplate": "/api/values",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
+            "UpstreamPathTemplate": "/a",
+            "UpstreamHttpMethod": [ "Get" ]
+
+        },
+        {
+            "DownstreamPathTemplate": "/api/values",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9002
+                }
+            ],
+            "UpstreamPathTemplate": "/b",
+            "UpstreamHttpMethod": [ "Get" ]
+
+        }
+    ],
+    "GlobalConfiguration": {
+        "RequestIdKey": "OcRequestId",
+        "AdministrationPath": "/administration"
+    }
+}
