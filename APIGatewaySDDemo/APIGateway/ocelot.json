@@ -5,21 +5,22 @@
             "DownstreamScheme": "http",
             "UpstreamPathTemplate": "/a",
             "UseServiceDiscovery": true,
-            "LoadBalancer": "RoundRobin",
             "ServiceName": "service-a",
             "UpstreamHttpMethod": [ "Get" ],
             "QoSOptions": {
-                //"ExceptionsAllowedBeforeBreaking": 3,
-                //"DurationOfBreak": 1000,
-                //"TimeoutValue": 5000
+                "ExceptionsAllowedBeforeBreaking": 3,
+                "DurationOfBreak": 1000,
+                "TimeoutValue": 5000
             },
-            "FileCacheOptions": { "TtlSeconds": 15 }
+            "FileCacheOptions": { "TtlSeconds": 15 },
+            "LoadBalancerOptions": {
+                "Type": "RoundRobin"
+            }
         },
         {
             "DownstreamPathTemplate": "/api/values",
             "DownstreamScheme": "http",
             "UpstreamPathTemplate": "/b",
-            "LoadBalancer": "RoundRobin",
             "UseServiceDiscovery": true,
             "ServiceName": "service-b",
             "UpstreamHttpMethod": [ "Get" ],
