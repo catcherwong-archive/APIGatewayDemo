@@ -50,3 +50,12 @@ Please follow [
 Building API Gateway Using Ocelot In ASP.NET Core - Load Balancing](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-load-balancing/) for more infomation.
 
 Link here : [APIGatewayLBDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayLBDemo)
+
+## #7 Service Discovery Demo With Eureka
+
+A simple demo using Ocelot to hanlde Service Discovery.
+
+Please follow [	
+Building API Gateway Using Ocelot In ASP.NET Core - Service Discovery (Eureka)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-service-discoveryeureka/) for more infomation.
+
+Link here : [APIGatewaySDDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewaySDDemo)
