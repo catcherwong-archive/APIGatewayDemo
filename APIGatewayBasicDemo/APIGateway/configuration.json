@@ -3,24 +3,42 @@
         {
             "DownstreamPathTemplate": "/api/customers",
             "DownstreamScheme": "http",
-            "DownstreamHost": "localhost",
-            "DownstreamPort": 9001,
+            // "DownstreamHost": "localhost",
+            // "DownstreamPort": 9001,
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
             "UpstreamPathTemplate": "/customers",
             "UpstreamHttpMethod": [ "Get" ]
         },
         {
             "DownstreamPathTemplate": "/api/customers/{id}",
-            "DownstreamScheme": "http",
-            "DownstreamHost": "localhost",
-            "DownstreamPort": 9001,
+            "DownstreamScheme": "http",            
+            // "DownstreamHost": "localhost",
+            // "DownstreamPort": 9001,
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9001
+                }
+            ],
             "UpstreamPathTemplate": "/customers/{id}",
             "UpstreamHttpMethod": [ "Get" ]
         },
         {
             "DownstreamPathTemplate": "/api/products",
             "DownstreamScheme": "http",
-            "DownstreamPort": 9002,
-            "DownstreamHost": "localhost",
+            // "DownstreamPort": 9002,
+            // "DownstreamHost": "localhost",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 9002
+                }
+            ],
             "UpstreamPathTemplate": "/api/products",
             "UpstreamHttpMethod": [ "Get" ]
         }
