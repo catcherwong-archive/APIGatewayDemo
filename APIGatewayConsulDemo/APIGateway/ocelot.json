@@ -1,0 +1,24 @@
+{
+    "ReRoutes": [
+      {
+        "UseServiceDiscovery": true, 
+        "DownstreamPathTemplate": "/{url}", 
+        "DownstreamScheme": "http",
+        "ServiceName": "MyService", 
+        "LoadBalancerOptions": { 
+          "Type": "RoundRobin"
+        },
+        "UpstreamPathTemplate": "/{url}", 
+        "UpstreamHttpMethod": [ "Get" ], 
+        "ReRoutesCaseSensitive": false 
+      }
+    ],
+    "GlobalConfiguration": { 
+      "ServiceDiscoveryProvider": { 
+        "Host": "localhost",
+        "Port": 8500,
+        "Type":"PollConsul",
+        "PollingInterval": 100
+      }
+    }
+  }
