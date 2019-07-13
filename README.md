@@ -46,16 +46,22 @@ Link here : [APIGatewayQoSDemo](https://github.com/catcherwong-archive/APIGatewa
 
 A simple demo using Ocelot to hanlde Load Balancing.
 
-Please follow [	
-Building API Gateway Using Ocelot In ASP.NET Core - Load Balancing](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-load-balancing/) for more infomation.
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Load Balancing](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-load-balancing/) for more infomation.
 
 Link here : [APIGatewayLBDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayLBDemo)
 
 ## #7 Service Discovery Demo With Eureka
 
-A simple demo using Ocelot to hanlde Service Discovery.
+A simple demo using Ocelot to hanlde Service Discovery with Eureka.
 
-Please follow [	
-Building API Gateway Using Ocelot In ASP.NET Core - Service Discovery (Eureka)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-service-discoveryeureka/) for more infomation.
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Service Discovery (Eureka)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-service-discoveryeureka/) for more infomation.
 
 Link here : [APIGatewaySDDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewaySDDemo)
+
+## #8 Service Discovery Demo With Consul
+
+A simple demo using Ocelot to hanlde Service Discovery with Consul.
+
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Service Discovery (Consul)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-service-discovery-consul/) for more infomation.
+
+Link here : [APIGatewayConsulDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayConsulDemo)
