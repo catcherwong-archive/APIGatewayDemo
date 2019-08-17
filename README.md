@@ -65,3 +65,11 @@ A simple demo using Ocelot to hanlde Service Discovery with Consul.
 Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Service Discovery (Consul)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-service-discovery-consul/) for more infomation.
 
 Link here : [APIGatewayConsulDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayConsulDemo)
+
+## #9 Configuration With Consul
+
+A simple demo using Ocelot to store configuration in Consul.
+
+Please follow [Building API Gateway Using Ocelot In ASP.NET Core - Configuration (Consul)](https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-net-core-configuration-consul/) for more infomation.
+
+Link here : [APIGatewayConfigurationWithConsulDemo](https://github.com/catcherwong-archive/APIGatewayDemo/tree/master/APIGatewayConfigurationWithConsulDemo)
