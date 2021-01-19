@@ -18,8 +18,8 @@
         }
       ],
       "UpstreamPathTemplate": "/",
-      "LoadBalancer": "RoundRobin",
-      //"LoadBalancer": "LeastConnection",
+      "LoadBalancerOptions": { "Type": "RoundRobin" },
+      //"LoadBalancerOptions": { "Type": "LeastConnection" },
       "UpstreamHttpMethod": [ "Get" ]
     }    
   ],
