@@ -1,40 +1,40 @@
-﻿// namespace APIGateway
-// {
-//     using Microsoft.AspNetCore.Builder;
-//     using Microsoft.AspNetCore.Hosting;
-//     using Microsoft.Extensions.Configuration;
-//     using Microsoft.Extensions.DependencyInjection;
-//     using Microsoft.Extensions.Logging;
-//     using Ocelot.DependencyInjection;
-//     using Ocelot.Middleware;
+﻿namespace APIGateway
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+    using Ocelot.DependencyInjection;
+    using Ocelot.Middleware;
 
-//     public class Startup
-//     {
-//         public Startup(IHostingEnvironment env)
-//         {
-//             var builder = new Microsoft.Extensions.Configuration.ConfigurationBuilder();
-//             builder.SetBasePath(env.ContentRootPath)
-//                    .AddJsonFile("appsettings.json")
-//                    //add configuration.json
-//                    .AddJsonFile("configuration.json", optional: false, reloadOnChange: true)
-//                    .AddEnvironmentVariables();
+    public class Startup
+    {
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddOcelot();
+        }
 
-//             Configuration = builder.Build();
-//         }
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-//         public IConfiguration Configuration { get; }
-
-//         public void ConfigureServices(IServiceCollection services)
-//         {
-//             services.AddOcelot(Configuration);
-//         }
-        
-//         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
-//         {
-//             //console logging
-//             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-
-//             app.UseOcelot().Wait();
-//         }
-//     }
-// }
+            app.UseRouting();
+            app.UseOcelot();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello World!");
+                });
+            });
+        }
+    }
+}

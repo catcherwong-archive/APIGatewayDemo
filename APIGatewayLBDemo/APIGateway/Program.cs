@@ -9,6 +9,7 @@
     using Microsoft.Extensions.DependencyInjection;
     using Ocelot.DependencyInjection;
     using Ocelot.Middleware;
+    using Microsoft.Extensions.Hosting;
 
     public class Program
     {
@@ -20,7 +21,7 @@
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                    //.UseStartup<Startup>()
-                   .UseUrls("http://*:9000")
+                   .UseUrls("https://*:44338")
                    .ConfigureAppConfiguration((hostingContext, config) =>
                {
                    config
@@ -31,12 +32,23 @@
                .ConfigureServices(s =>
                {
                    s.AddOcelot();
-                   s.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                   s.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
                })
                 .Configure(a =>
                 {                    
                     a.UseOcelot().Wait();
                 });
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+
+           Host.CreateDefaultBuilder(args).ConfigureAppConfiguration((hosting, config) =>
+           {
+               config.AddJsonFile("configuration.json");
+
+           }).ConfigureWebHostDefaults(webBuilder =>
+           {
+               webBuilder.UseStartup<Startup>();
+           });
 
         // public static void Main(string[] args)
         // {

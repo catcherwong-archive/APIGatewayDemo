@@ -1,27 +1,23 @@
 ﻿{
-  "ReRoutes": [
+  "Routes": [
     {
       "DownstreamPathTemplate": "/api/values",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9001
+          "Port": 44300
         },
         {
           "Host": "localhost",
-          "Port": 9002
-        },
-        {
-          "Host": "localhost",
-          "Port": 9001
+          "Port": 44328
         }
       ],
       "UpstreamPathTemplate": "/",
-      "LoadBalancerOptions": { "Type": "RoundRobin" },
+      "LoadBalancerOptions": { "Type": "LeastConnection" },
       //"LoadBalancerOptions": { "Type": "LeastConnection" },
       "UpstreamHttpMethod": [ "Get" ]
-    }    
+    }
   ],
   "GlobalConfiguration": {
     "RequestIdKey": "OcRequestId",
